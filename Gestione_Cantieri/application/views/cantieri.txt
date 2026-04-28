@@ -1,0 +1,17 @@
+<a href="<?php echo URL; ?>cantieri/dettaglio/<?php echo $cantiere->id; ?>">
+    <?php echo $cantiere->titolo; ?>
+</a>
+
+class Cantieri extends Controller {
+
+    public function index() {
+        echo "Lista cantieri";
+    }
+
+    public function dettaglio($id) {
+        echo "Cantiere numero " . $id;
+    }
+
+}
+
+<?php echo URL; ?>cantieri/dettaglio/<?php echo $id; ?>
