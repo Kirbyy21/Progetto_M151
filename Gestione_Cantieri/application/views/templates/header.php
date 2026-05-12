@@ -21,9 +21,9 @@
             <ul class="nav-menu">
                 <li><a href="<?php echo URL ?>home/index">Home</a></li>
                 <li><a href="<?php echo URL ?>Cantiere/show">Cantieri</a></li>
-                <li><a href="<?php echo URL ?>cantieri/ricerca">Ricerca</a></li>
+                <!--li><a href="<-?php echo URL ?>cantieri/ricerca">Ricerca</a></li-->
                 <li><a href="<?php echo URL ?>Login/login">Login</a></li>
-                <li><a href="<?php echo URL ?>utenti/registrazione">Registrati</a></li>
+                <li><a href="<?php echo URL ?>Registrazione/register">Registrati</a></li>
             </ul>
         </nav>
 

@@ -2,22 +2,27 @@
 
 class Database {
 
-    public function connect() {
+    Private static $conn = null;
 
-        try {
-            $conn = new PDO(
-                "mysql:host=".HOST.";dbname=".DATABASE,
-                USERNAME,
-                PASSWORD
-            );
+    public static function connect() {
+        if (self::$conn == null) {
+            try {
+                self::$conn = new PDO(
+                    "mysql:host=" . HOST . ";dbname=" . DATABASE,
+                    USERNAME,
+                    PASSWORD
+                );
 
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = self::$conn->prepare("USE ".DATABASE);
+                $stmt->execute();
+                return self::$conn;
 
-            return $conn;
-
-        } catch(PDOException $e) {
-            echo "Errore connessione: " . $e->getMessage();
+            } catch (PDOException $e) {
+                echo "Errore connessione: " . $e->getMessage();
+            }
         }
+        return self::$conn;
     }
 }
 

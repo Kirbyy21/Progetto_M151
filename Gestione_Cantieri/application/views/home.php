@@ -7,7 +7,7 @@
         background-size: cover;
         background-color: rgba(0, 0, 0, 0.3);
         background-blend-mode: darken;
-
+        overflow: hidden;
         color: #fff;
     }
 </style>

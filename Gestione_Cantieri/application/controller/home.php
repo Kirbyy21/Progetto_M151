@@ -1,7 +1,7 @@
 <?php
 
 
-use models\Utente;
+require 'application/models/Utente.php';
 
 class Home
 {

@@ -1,7 +1,6 @@
 <?php
-namespace models;
-use Illuminate\Database\Eloquent\Model;
-class Utente extends Model {
+
+class Utente {
     protected $table = 'utente';
     protected $primaryKey = 'email';
     public $incrementing = false;
@@ -18,6 +17,11 @@ class Utente extends Model {
         }
 
         return false;
+    }
+
+    public function get()
+    {
+
     }
 
 }
